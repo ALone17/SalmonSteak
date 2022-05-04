@@ -1,0 +1,219 @@
+.hero {
+  &__section {
+    position: relative;
+    height: 100vh;
+    // width: 100vw;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.69),
+        rgba(0, 0, 0, 0.69)
+      ),
+      url("../image/hero-image.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+  &__text_box {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__description {
+    color: $color-gray-light;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.how_it_work {
+  &__section {
+    width: 108.1rem;
+    margin: 0 auto;
+    padding: 24rem 0;
+    text-align: center;
+    @include mediaQuery(tab-port) {
+      width: 100rem;
+      padding: 12rem 0;
+    }
+  }
+  &__titel {
+    color: $second-color;
+    margin-bottom: 1.6rem;
+  }
+  &__description {
+    color: $second-color-dark;
+    margin-bottom: 8rem;
+  }
+}
+
+.best_before {
+  &__section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69));
+    position: relative;
+    color: #fff;
+    padding: 24rem 0;
+    @include mediaQuery(tab-port) {
+      padding: 12rem 0;
+    }
+  }
+
+  &__titel {
+    text-align: center;
+  }
+  &__content {
+    max-width: 136rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 7.2rem;
+    @include mediaQuery(tab-port) {
+      max-width: 100rem;
+    }
+  }
+
+  &__text {
+    max-width: 67rem;
+    @include mediaQuery(tab-port) {
+      max-width: 45.5rem;
+    }
+  }
+  &__images {
+    position: relative;
+    width: 67rem;
+    flex-basis: 0;
+    transition: all 0.3s;
+
+    &:hover {
+      img:not(:hover) {
+        transform: scale(0.9);
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    width: 35.6rem;
+    transition: all 0.3s;
+    outline-offset: 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    @include mediaQuery(tab-port) {
+      width: 25.3rem;
+    }
+
+    &-1 {
+      left: 0;
+      top: -2rem;
+    }
+    &-2 {
+      left: 28.6rem;
+      top: 2rem;
+      @include mediaQuery(tab-port) {
+        left: 20.6rem;
+      }
+    }
+    &-3 {
+      left: 12rem;
+      bottom: 3rem;
+      @include mediaQuery(tab-port) {
+        left: 5rem;
+        bottom: 15rem;
+      }
+    }
+    &:hover {
+      transform: scale(1.1) translateY(-0.5rem);
+      outline: 1.5rem solid $second-color;
+      z-index: 20;
+      box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.blog {
+  &__section {
+    max-width: 106rem;
+    margin: 0 auto;
+    padding: 24rem 0;
+  }
+  &__titel {
+    color: $second-color;
+    text-align: center;
+  }
+}
+
+.footer {
+  background-color: $color-gray-2;
+  text-align: center;
+  padding: 10rem 0;
+  &__company-icon {
+    height: 14rem;
+  }
+  &__company-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20rem;
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    gap: 1.8rem;
+    list-style: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    @include mediaQuery(tab-port) {
+      gap: 1rem;
+      font-size: 1.6rem;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2rem;
+      width: 100%;
+      height: 0.03rem;
+      background-color: $color-gray-light;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.2) skewY(2deg);
+      background-color: $second-color;
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    }
+  }
+  .copyright {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2rem;
+      width: 100%;
+      height: 0.03rem;
+      background-color: $color-gray-light;
+    }
+    span {
+      display: inline-block;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    span:hover {
+      transform: scale(1.2) skewY(2deg);
+      background-color: $second-color;
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "salmon",
+  "version": "1.0.0",
+  "description": "проект с вымышленной компанией SalmonSteak",
+  "main": "index.js",
+  "scripts": {
+    "devServer": "live-server",
+    "watch:sass": "node-sass Scss/main.scss CSS/style.css -w",
+    "start": "npm-run-all --parallel devServer watch:sass"
+  },
+  "author": "Anton Kondratenko",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

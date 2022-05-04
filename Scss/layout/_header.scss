@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  z-index: 21;
+  width: 100%;
+  background-color: rgba($color-gray-light-3, 0.89);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.company {
+  &-brend {
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    @include mediaQuery(tab-port) {
+      font-size: 1.6rem;
+    }
+  }
+  &-icon {
+    height: 10.75rem;
+    padding: 2rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  padding: 0 5rem;
+  @include mediaQuery(tab-port) {
+    font-size: 1.6rem;
+    padding: 0 2.5rem;
+  }
+
+  &-list {
+    display: flex;
+    gap: 7rem;
+    flex-direction: row;
+    list-style: none;
+    @include mediaQuery(tab-port) {
+      gap: 3.5rem;
+    }
+  }
+  &-item {
+    position: relative;
+    &:first-child {
+      display: flex;
+      flex-direction: row;
+    }
+    &:first-child::before {
+      content: "";
+      display: block;
+      width: 0.2rem;
+      height: 100%;
+      background-color: $color-gray-light;
+      margin-right: 5rem;
+    }
+  }
+
+  &-link:link,
+  &-link:visited {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-gray-1;
+    &::before {
+      position: absolute;
+      bottom: -0.1rem;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 0.3rem;
+      transition: all 0.3s;
+      background-color: $second-color;
+    }
+  }
+
+  &-link:hover,
+  &-link:active {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &-btn {
+    margin-left: auto;
+  }
+}

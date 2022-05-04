@@ -1,0 +1,38 @@
+.title__text {
+  font-size: 8.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  color: #fff;
+  @include mediaQuery(tab-port) {
+    font-size: 4.3rem;
+    letter-spacing: 0;
+  }
+}
+
+.second__titel {
+  font-size: 5.2rem;
+  font-weight: 700;
+  letter-spacing: 0rem;
+  @include mediaQuery(tab-port) {
+    font-size: 3.6rem;
+  }
+}
+
+.three_titel {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include mediaQuery(tab-port) {
+    font-size: 2rem;
+  }
+}
+
+.description__text {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  @include mediaQuery(tab-port) {
+    font-size: 2rem;
+  }
+}

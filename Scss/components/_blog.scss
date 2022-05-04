@@ -1,0 +1,54 @@
+.blog {
+  &__card {
+    display: flex;
+    overflow: hidden;
+    clip-path: polygon(5% 0, 0 100%, 95% 100%, 100% 0);
+    background-color: $color-gray-light-2;
+    padding: 4rem 6.8rem;
+    box-shadow: 0rem 3rem 6rem rgba(0, 0, 0, 0.1);
+    &:hover {
+      img {
+        transform: scale(0.8);
+        filter: brightness(0.6) blur(0.4rem);
+      }
+      figcaption {
+        transform: translatey(-2rem);
+        opacity: 1;
+      }
+    }
+  }
+  &__shape {
+    position: relative;
+    width: 23rem;
+    height: 23rem;
+    clip-path: circle(9rem at 50% 50%);
+    transition: all 0.2s;
+  }
+  &__img {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+    filter: brightness(1);
+    transition: all 0.3s;
+  }
+  &__caption {
+    font-size: 2.4rem;
+    color: #fff;
+    top: 45%;
+    left: 30%;
+    transition: all 0.3s;
+    position: absolute;
+    opacity: 0;
+  }
+  &__text {
+  }
+  &__titel {
+    color: $second-color;
+  }
+  &__paragraph {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $second-color-dark;
+  }
+}

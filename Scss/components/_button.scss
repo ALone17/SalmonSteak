@@ -1,0 +1,33 @@
+.btn {
+  border: none;
+  font-size: 2.4rem;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  background-color: $second-color;
+  color: #fff;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  cursor: pointer;
+  &:link,
+  &:visited {
+    font-size: 2.4rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    background-color: $second-color;
+    color: #fff;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    filter: brightness(1.8);
+    box-shadow: 0 0.5rem 0.3rem rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    transform: translateY(0);
+    filter: brightness(1);
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  }
+}

@@ -1,0 +1,44 @@
+.steps {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 6rem;
+}
+
+.step {
+  text-align: center;
+  width: inherit;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: $color-gray-light-2;
+  transition: all 0.3s;
+  @include mediaQuery(tab-port) {
+    padding: 1rem;
+  }
+
+  &__number {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: $second-color-dark;
+  }
+  &__image {
+    width: inherit;
+    object-fit: cover;
+    clip-path: circle(6rem at 50% 50%);
+    &_fix {
+      clip-path: circle(6rem at 40% 47%);
+      transform: translate(10%, 3%);
+    }
+  }
+  &__description {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $second-color-dark;
+  }
+  &:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: 0 2.5rem 3.5rem rgba(0, 0, 0, 0.2);
+  }
+}
